@@ -35,7 +35,7 @@ public class Account {
 	}
 	
 	public void saque(double withdraw) {
-		this.balance -= withdraw;
+		this.balance -= (withdraw + 5.0);
 	}
 	
 	public String ToString() {

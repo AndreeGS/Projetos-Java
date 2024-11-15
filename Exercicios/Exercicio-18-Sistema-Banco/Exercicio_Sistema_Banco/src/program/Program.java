@@ -21,6 +21,9 @@ public class Program {
 			System.out.println("3 - Delete");
 			System.out.println("4 - View");
 			System.out.println("5 - Exit");
+			System.out.println("6 - Deposit");
+			System.out.println("7 - Saque");
+			
 
 			select = sc.nextInt();
 			sc.nextLine();
@@ -119,6 +122,52 @@ public class Program {
 			else if (select == 5) {
 				System.out.println("Exiting...");
 			}
+			
+			else if (select == 6) {
+				
+				System.out.print("Code of Deposit: ");
+			    int depositAccount = sc.nextInt();
+			    sc.nextLine();
+			    
+			    int local = getPosition(data, depositAccount);
+			    
+			    if (local != -1) {
+			        System.out.print("Value Deposit: ");
+			        double newDeposit = sc.nextDouble();
+			        sc.nextLine();
+       
+			        data.get(local).deposit(newDeposit);
+			        
+			
+			        System.out.println("Deposit successfully.");
+			        
+			    } else {
+			        System.out.println("Account not found.");
+			    }
+			}
+			
+			
+			else if (select == 7) {
+				System.out.print("Code of Saque: ");
+			    int depositAccount = sc.nextInt();
+			    sc.nextLine();
+			    
+			    int local = getPosition(data, depositAccount);
+			    
+			    if (local != -1) {
+			        System.out.print("Value Saque: ");
+			        double newSaque = sc.nextDouble();
+			        sc.nextLine();
+       
+			        data.get(local).saque(newSaque);
+			        
+			
+			        System.out.println("Saque successfully.");
+			        
+			    } else {
+			        System.out.println("Account not found.");
+			    }
+			}			
 			
 			else {
 				System.out.println("Invalid!");				
