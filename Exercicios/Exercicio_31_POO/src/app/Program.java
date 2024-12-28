@@ -17,7 +17,7 @@ public class Program {
 		
 		List<Employee> list = new ArrayList<>();
 		
-		System.out.println("Enter the number of employees: ");
+		System.out.print("Enter the number of employees: ");
 		int n = sc.nextInt();
 		
 		for(int i=1; i <=n; i++) {
